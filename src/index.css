@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: moon_get-Heavy;  
+  font-weight: 500;
+  src: url(fonts/moon_get-Heavy.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: janeroe-bold;
+  src: url(fonts/JaneRoe-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: janeroe-light;
+  src: url(fonts/JaneRoe-Light.ttf) format("truetype");
+}
+@font-face {
+  font-family: nasalization-rg;
+  src: url(fonts/nasalization-rg.otf);
+}
+@font-face {
+  font-family: microflt;
+  src: url(fonts/MicroFLF.ttf);
+}
+@font-face {
+  font-family: microflt-bold;
+  src: url(fonts/MicroFLF-Bold.ttf);
+}
+@font-face {
+  font-family: hakuna;
+  src: url(fonts/Hakuna-Sans.otf);
+}
+@font-face {
+  font-family: okta-b;
+  src: url(fonts/Okta-BoldItalic.otf);
+}
+
+wave {
+  overflow-x: hidden !important;
+}
