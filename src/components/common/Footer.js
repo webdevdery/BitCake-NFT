@@ -15,7 +15,19 @@ export default function Footer() {
       <div className="w-full">
         <div className="lg:py-16 lg:px-0 md:px-16 sm:px-2">
           <div className="flex lg:flex-nowrap flex-wrap lg:space-x-32 border-b border-gray-200 pb-8">
-            <div className="mt-8 xl:mt-0 text-left lg:w-1/2 w-full sm:px-0 px-2">
+            <div className="mt-8 xl:mt-0 text-left lg:w-3/5 w-full sm:px-0 px-2">
+              <img
+                className="h-10"
+                src="/assets/images/logo-dark.png"
+                alt="Company name"
+              />
+              <p className="text-white text-base">
+                BitCake is a next generation marketplace where artists and
+                collectors can create, sell and collect digital items secured
+                with blockchain.
+              </p>
+            </div>
+            <div className="mt-8 xl:mt-0 text-left lg:w-2/5 w-full space-y-4 sm:px-0 px-2">
               <div className="text-xl font-semibold text-white tracking-wider">
                 Get the freshest BitCake updates
               </div>
@@ -36,24 +48,6 @@ export default function Footer() {
                   <CustomButton styled="solid" label="Sign up" />
                 </div>
               </form>
-            </div>
-            <div className="mt-8 xl:mt-0 text-left lg:w-1/2 w-full space-y-4 sm:px-0 px-2">
-              <div className="text-lg font-semibold text-white tracking-wider">
-                Join the community
-              </div>
-
-              <div className="flex space-x-2">
-                {navigation.social.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="text-white rounded-md"
-                  >
-                    <span className="sr-only">{item.name}</span>
-                    <item.icon className="h-12 w-12" aria-hidden="true" />
-                  </a>
-                ))}
-              </div>
             </div>
           </div>
           <div className="grid lg:grid-cols-3 lg:gap-8 md:gap-4 mt-8">
@@ -151,16 +145,22 @@ export default function Footer() {
               </div>
             </div>
             <div className="space-y-3 xl:col-span-1 text-left mt-8 xl:mt-0 sm:px-0 px-2">
-              <img
-                className="h-10"
-                src="/assets/images/logo-dark.png"
-                alt="Company name"
-              />
-              <p className="text-white text-base">
-                BitCake is a next generation marketplace where artists and
-                collectors can create, sell and collect digital items secured
-                with blockchain.
-              </p>
+              <div className="text-lg font-semibold text-white tracking-wider">
+                Join the community
+              </div>
+
+              <div className="flex space-x-2">
+                {navigation.social.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="text-white rounded-md"
+                  >
+                    <span className="sr-only">{item.name}</span>
+                    <item.icon className="h-12 w-12" aria-hidden="true" />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
           <div className="mt-12 border-t border-gray-200 pt-8">

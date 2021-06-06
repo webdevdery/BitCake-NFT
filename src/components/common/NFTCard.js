@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { HeartIcon } from "@heroicons/react/outline";
-import { PlayIcon, PauseIcon } from "@heroicons/react/solid";
-import DescriptionComponent from "./home/DescriptionComponent";
-import DotMenu from "./DotMenu";
-import ReactAudioPlayer from "react-audio-player";
-import { Link } from "react-router-dom";
-import AudioImage from "./audioImage";
-import VideoImage from "./videoImage";
+import React, {useState} from 'react';
+import {HeartIcon} from '@heroicons/react/outline';
+import {PlayIcon, PauseIcon} from '@heroicons/react/solid';
+import DescriptionComponent from './home/DescriptionComponent';
+import DotMenu from './DotMenu';
+import ReactAudioPlayer from 'react-audio-player';
+import {Link} from 'react-router-dom';
+import AudioImage from './audioImage';
+import VideoImage from './videoImage';
 
 export default function NFTCard(props) {
   const [isFavourite, setisFavourite] = useState(false);
@@ -16,7 +16,7 @@ export default function NFTCard(props) {
   };
 
   const onClickCard = ($event) => {
-    if ($event.target.tagName === "svg") $event.preventDefault();
+    if ($event.target.tagName === 'svg') $event.preventDefault();
   };
   return (
     <Link to={`/auction/${10}`}>
@@ -26,13 +26,13 @@ export default function NFTCard(props) {
       >
         {/* <LazyLoad className="w-full"> */}
         <div className="bg-primary-light w-full rounded-t-md relative">
-          {props.cardData.cardType === "image" ? (
+          {props.cardData.cardType === 'image' ? (
             <img
               alt="cardImage"
               src={props.cardData.imagePath}
               className="w-full h-80 rounded-t-lg"
             />
-          ) : props.cardData.cardType === "audio" ? (
+          ) : props.cardData.cardType === 'audio' ? (
             <AudioImage
               src={props.cardData.imagePath}
               audioPath={props.cardData.audioPath}
@@ -47,7 +47,7 @@ export default function NFTCard(props) {
             alt=""
             src={props.cardData.avatarPath}
             className={`rounded-full w-20 h-20 absolute -bottom-10 border-4 border-white`}
-            style={{ left: "calc(50% - 2.5rem)" }}
+            style={{left: 'calc(50% - 2.5rem)'}}
           ></img>
         </div>
         {/* </LazyLoad> */}
@@ -69,7 +69,7 @@ export default function NFTCard(props) {
 
         <div className="w-full flex justify-center flex-wrap">
           <div className="text-lg px-10 truncate text-center w-full">
-            {"@"}
+            {'@'}
             {props.cardData.title}
           </div>
           <div className="text-2xl font-bold px-5 truncate text-center mt-2 w-full">
@@ -79,12 +79,12 @@ export default function NFTCard(props) {
 
         <div className="w-full bg-primary-dark p-4 flex rounded-b-md">
           <div className="w-1/2 flex flex-wrap">
-            <div className="w-full text-lg text-white font-bold text-left truncate">
+            <div className="w-full text-lg text-white font-bold text-center truncate">
               {props.cardData.priceTitle}
             </div>
-            <div className="w-full">
+            <div className="w-full text-center">
               {props.cardData.price && (
-                <div className="flex items-center flex h-6">
+                <div className="flex justify-center h-6">
                   {/* <img
                   src={currencyArray[props.cardData.priceType]}
                   className="w-5 h-5"
@@ -96,7 +96,7 @@ export default function NFTCard(props) {
               )}
             </div>
           </div>
-          <div className="w-1/2 flex items-center justify-between text-left">
+          <div className="w-1/2 flex items-center justify-between text-center">
             <DescriptionComponent cardData={props.cardData} />
           </div>
         </div>
