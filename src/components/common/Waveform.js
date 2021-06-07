@@ -1,8 +1,8 @@
 /* eslint-disable no-useless-constructor */
 import React, {Component} from 'react';
 import WaveSurfer from 'wavesurfer.js';
-import {PlayIcon, PauseIcon} from '@heroicons/react/outline';
-
+import playBtn from '../../img/play.png';
+import stopBtn from '../../img/stop.png';
 class Waveform extends Component {
   state = {
     playing: false,
@@ -17,7 +17,7 @@ class Waveform extends Component {
     const track = document.querySelector('#track');
 
     this.waveform = WaveSurfer.create({
-      barWidth: 5,
+      barWidth: 2,
       barHeight: 2,
       cursorWidth: 1,
       barRadius: 3,
@@ -41,19 +41,27 @@ class Waveform extends Component {
   render() {
     return (
       <div
-        className="flex flex-row items-center justify-center w-full h-full bg-red-500 hover:bg-red-700 bg-opacity-20 hover:bg-opacity-30 px-3 pt-2"
+        className="flex flex-row items-center justify-center w-full h-full px-3 pt-2"
         onClick={this.props.onClick}
       >
         {!this.state.playing ? (
-          <PlayIcon
-            className="w-16 h-16 cursor-pointer text-primary-dark"
-            onClick={this.handlePlay}
-          />
+          <>
+            <img
+              className="w-16 h-16 cursor-pointer text-primary-dark"
+              src={playBtn}
+              onClick={this.handlePlay}
+              alt="play"
+            />
+          </>
         ) : (
-          <PauseIcon
-            className="w-16 h-16 cursor-pointer text-primary-dark"
-            onClick={this.handlePlay}
-          />
+          <>
+            <img
+              className="w-16 h-16 cursor-pointer text-primary-dark"
+              src={stopBtn}
+              onClick={this.handlePlay}
+              alt="stop"
+            />
+          </>
         )}
         <div
           className="w-full h-20 pt-3 overflow-hidden"
