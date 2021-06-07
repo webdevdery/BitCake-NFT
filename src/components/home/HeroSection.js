@@ -54,7 +54,7 @@ function HeroSection(props) {
               </div>
             </div>
             <div className="w-1/3 flex items-center justify-center">
-              <div className="flex flex-wrap ml-5 mt-8">
+              <div className="mt-8">
                 <div className="text-sm w-full">A-Monster Cloth</div>
                 <div className="text-sm w-full text-primary">
                   @Bernatinmotion
