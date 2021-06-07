@@ -2,10 +2,10 @@ import {XCircleIcon} from '@heroicons/react/outline';
 import React, {Fragment, useState} from 'react';
 import CustomButton from '../common/Button';
 import {useForm} from 'react-hook-form';
-import {Dialog, FocusTrap, Transition} from '@headlessui/react';
+import {Dialog, Transition} from '@headlessui/react';
 import {Link} from 'react-router-dom';
 
-function HeroSection() {
+function HeroSection(props) {
   const [mainDialog, setMainDialog] = useState(false);
   const [existDialog, setExistDialog] = useState(false);
 
@@ -21,26 +21,55 @@ function HeroSection() {
     <div className=" w-full lg:pt-16 pb-20 text-center lg:text-left flex lg:flex-nowrap flex-wrap">
       <div className="px-4 lg:w-1/2 lg:mt-0 mt-10 mx-auto">
         <div className="transition-shadow ease-in-out duration-500 shadow-lg rounded-lg cursor-pointer hover:shadow-2xl w-full max-w-xl min-w-xl mx-auto">
-          <video
-            autoPlay
-            controlsList="nodownload"
-            className="w-full lg:h-100 sm:h-96 h-64 rounded-t-lg object-fill z-10"
-            loop
-            muted
-            playsInline=""
-            poster="https://lh3.googleusercontent.com/ZhVmqu6Mu2k1RrMmTIDs5qMI71zc0BVMUiUebimjcLUFqf79FAoXvZb3SYZDqGfKiFYxvV2UzT3KyGc0shWxhJjGSyi0OOWY_3Q6Og"
-            // src="https://storage.opensea.io/files/b74ea6dad580ef61192b230f147709a7.mp4"
-            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-          ></video>
-          <div className="bg-white h-16 sm:h-20 rounded-b-lg p-5 flex items-center">
+          <div className="bg-primary-light w-full rounded-t-md relative">
+            <video
+              autoPlay
+              controlsList="nodownload"
+              className="w-full h-80 rounded-t-lg object-fill z-10"
+              loop
+              muted
+              playsInline=""
+              poster="https://lh3.googleusercontent.com/ZhVmqu6Mu2k1RrMmTIDs5qMI71zc0BVMUiUebimjcLUFqf79FAoXvZb3SYZDqGfKiFYxvV2UzT3KyGc0shWxhJjGSyi0OOWY_3Q6Og"
+              // src="https://storage.opensea.io/files/b74ea6dad580ef61192b230f147709a7.mp4"
+              src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+            ></video>
             <img
               alt=""
-              className="rounded-full w-12 h-12"
-              src="https://lh3.googleusercontent.com/S_YN8ED75dt6Z1IwwrlSdz20rseOLYCa_k8QvIYMZZrb8Jk2N6QnRL26mwdmqxUYZSn4llz_lckXlCeLgLt9EE-pFTVTdJkjHPbxoA=s100"
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60"
+              className={`rounded-full w-20 h-20 absolute -bottom-10 border-4 border-white`}
+              style={{left: 'calc(50% - 2.5rem)'}}
             ></img>
-            <div className="flex flex-wrap ml-5">
-              <div className="text-lg w-full">A-Monster Cloth</div>
-              <div className="text-blue-400">Bernatinmotion</div>
+          </div>
+          <div className="bg-white h-20 sm:h-20 rounded-b-lg p-5 flex items-center">
+            <div className="w-1/3 flex flex-wrap">
+              <div className="w-full text-lg text-black font-bold text-center truncate">
+                Current Bid
+              </div>
+              <div className="w-full text-center">
+                <div className="flex justify-center h-6">
+                  <span className="text-base lg:text-sm xl:text-base text-primary">
+                    1.87 ETH
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="w-1/3 flex items-center justify-center">
+              <div className="flex flex-wrap ml-5 mt-8">
+                <div className="text-sm w-full">A-Monster Cloth</div>
+                <div className="text-sm w-full text-primary">
+                  @Bernatinmotion
+                </div>
+              </div>
+            </div>
+            <div className="w-1/3 flex items-center justify-between text-center">
+              <div className="w-full flex flex-wrap">
+                <div className="w-full text-lg text-black font-bold truncate">
+                  Ending in
+                </div>
+                <div className="w-full text-white text-base lg:text-sm xl:text-base text-blue-300 text-primary h-6 truncate">
+                  04h 36m 45s
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -140,6 +169,7 @@ function HeroSection() {
                       <img
                         src="/assets/icons/createModal/exciting.png"
                         className="w-16 h-16 mx-auto"
+                        alt="existing"
                       />
                       <div className="w-full text-center">
                         The NFT is already in my wallet
@@ -152,6 +182,7 @@ function HeroSection() {
                         <img
                           src="/assets/icons/createModal/create.png"
                           className="w-16 h-16 mx-auto"
+                          alt="create"
                         />
                         <div className="w-full text-center">
                           Create a new item
