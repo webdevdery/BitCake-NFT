@@ -77,11 +77,11 @@ export default function Header() {
     },
   ];
   const statsMenus = [
-    {
-      value: 'Charts',
-      link: '/charts',
-      svgPath: '',
-    },
+    // {
+    //   value: 'Charts',
+    //   link: '/charts',
+    //   svgPath: '',
+    // },
     {
       value: 'Activity',
       link: '/activity',
@@ -95,30 +95,30 @@ export default function Header() {
       svgPath: '',
     },
     {
-      value: 'Partners & Developers',
+      value: 'BitCake (BCK) White Paper',
       link: '',
       svgPath: '',
     },
     {
-      value: 'Suggestions',
-      link: '',
+      value: 'Design an NFT',
+      link: 'https://cakeshoplabs.com',
       svgPath: '',
     },
     {
-      value: 'Discord Community',
-      link: '',
+      value: 'Telegram Community',
+      link: 'https://t.me/bitcakeclub',
       svgPath: '',
     },
     {
-      value: 'Blog',
-      link: '',
+      value: 'Become a Partner',
+      link: 'partners@bitcake.io',
       svgPath: '',
     },
-    {
-      value: 'Subscribe to Newsletter',
-      link: '',
-      svgPath: '',
-    },
+    // {
+    //   value: 'Subscribe to Newsletter',
+    //   link: '',
+    //   svgPath: '',
+    // },
   ];
   const accountMenu = [
     {
