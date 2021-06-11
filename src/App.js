@@ -65,8 +65,8 @@ function App() {
             <Route path="/account" component={AccountPages} />
 
             <Route exact path="/" component={Home} />
-            <Route exact path="/category" component={Assets} />
-            <Route path="/category" component={CategoryPage} />
+            <Route exact path="/collection" component={Assets} />
+            <Route path="/collection" component={CategoryPage} />
             <Route path="/auction/:id" component={AuctionPage} />
             <Route exact path="/artists" component={ArtistsPage} />
             <Route exact path="/collections" component={CollectionsPage} />
