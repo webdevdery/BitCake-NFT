@@ -491,7 +491,7 @@ export const navigation = {
     {name: 'Video', href: '/collection/video'},
     {name: 'Digital Art', href: '/collection/art'},
     {name: 'Artists', href: '/artists'},
-    {name: 'Collectioins', href: '/collections'},
+    {name: 'Collections', href: '/collections'},
   ],
   myaccount: [
     {name: 'My Profile', href: '#'},
@@ -509,7 +509,7 @@ export const navigation = {
       href: 'https://bitcake.freshdesk.com/support/home',
       option: 'link',
     },
-    {name: 'Investors & Developers', href: '#', option: 'link'},
+    {name: 'BitCake (BCK) White Paper', href: '', option: 'link'},
     {
       name: 'Terms of Service',
       href: '/assets/docs/Terms Of Service.pdf',
