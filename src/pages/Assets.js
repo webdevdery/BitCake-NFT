@@ -1,7 +1,7 @@
-import React from "react";
-import { Route, Switch } from "react-router-dom";
-import Asset from "./assets/Asset";
-import New from "./assets/New";
+import React from 'react';
+import {Route, Switch} from 'react-router-dom';
+import Asset from './assets/Asset';
+import New from './assets/New';
 
 export default function Assets() {
   // const [buyNow, setbuyNow] = useState(false);
@@ -12,8 +12,8 @@ export default function Assets() {
   return (
     <div className="flex">
       <Switch>
-        <Route path="/collection" component={Asset} />
-        <Route path="/collection/new" component={New} />
+        <Route path="/assets" component={Asset} />
+        <Route path="/assets/new" component={New} />
       </Switch>
     </div>
   );
