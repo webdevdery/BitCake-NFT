@@ -24,8 +24,7 @@ export default function Footer() {
               <p className="text-white text-base">
                 BitCake is a next generation marketplace where artists and
                 collectors can create, sell and collect digital items secured
-                with blockchain.
-                <br /> BitCake easily transforms content (such as files,
+                with blockchain. BitCake easily transforms content (such as files,
                 artwork, music, videos and images) into a collectible that lives
                 on the Binace Smart Chain. For collectors, BitCake makes it easy
                 to shop and purchase digital collectibles. These items live on

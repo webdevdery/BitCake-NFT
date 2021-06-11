@@ -500,7 +500,7 @@ export const navigation = {
     {name: 'My Account Settings', href: '#'},
   ],
   stats: [
-    {name: 'Charts', href: '/charts'},
+    // {name: 'Charts', href: '/charts'},
     {name: 'Activity', href: '/activity'},
   ],
   resources: [
