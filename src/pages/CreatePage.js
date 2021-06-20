@@ -1,4 +1,4 @@
-import React, {Fragment, useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import NFTDropzone from '../components/common/nftDropzone';
 import {Editor} from '@tinymce/tinymce-react';
 import CurrencyInput from 'react-currency-input-field';
@@ -16,7 +16,6 @@ import {useSelector} from 'react-redux';
 import CustomListBox from '../components/common/customlistbox';
 import axios from 'axios';
 import {tokenSelector, userSelector} from '../redux/auth/selector';
-import {Redirect} from 'react-router';
 import {getCollections} from '../services/collection';
 import {createNotification} from '../App';
 
@@ -62,15 +61,18 @@ export default function CreatePage() {
   const [auctionlength, setauctionlength] = useState(auctionlengths[0]);
   const [collectionList, setcollectionList] = useState([]);
 
-  useEffect(async () => {
-    const collections = await getCollections(user.id);
-    let allCollections = [];
-    collections.data.result.length &&
-      collections.data.result.map((item) => {
-        allCollections.push({id: item.id, label: item.title});
-      });
-    setcollectionList(allCollections);
-  }, []);
+  useEffect(() => {
+    async function init() {
+      const collections = await getCollections(user.id);
+      let allCollections = [];
+      collections.data.result.length &&
+        collections.data.result.map((item) =>
+          allCollections.push({id: item.id, label: item.title})
+        );
+      setcollectionList(allCollections);
+    }
+    init();
+  }, [user.id]);
 
   // console.log(token);
   // if(!token)
@@ -252,7 +254,7 @@ export default function CreatePage() {
                   : setimageFile(newfile);
               }}
             />
-            {mainCategory.name == 'Audio' && (
+            {mainCategory.name === 'Audio' && (
               <NFTDropzone
                 nftType={mainCategory}
                 onChange={(newfile) => {

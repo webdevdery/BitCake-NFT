@@ -48,7 +48,7 @@ function HeroSection(props) {
               <div className="w-full text-center">
                 <div className="flex justify-center h-6">
                   <span className="text-base lg:text-sm xl:text-base text-primary">
-                    1.87 ETH
+                    1.87 BNB
                   </span>
                 </div>
               </div>
@@ -77,7 +77,8 @@ function HeroSection(props) {
       <div className="lg:w-1/2 w-full flex justify-center mt-10 lg:mt-0 px-5">
         <div className="my-auto w-full">
           <div className="text-2xl tracking-tight text-gray-900 sm:text-3xl md:text-4xl lg:text-2xl xl:text-3xl font-oktab">
-            Discover digital assets minted and secured on the Binance Smart Chain.
+            Discover digital assets minted and secured on the Binance Smart
+            Chain.
             {/* <span className="block xl:inline w-full font-bold font-nasalization">Now NFTs are</span>{" "}
             <span className="block text-primary-dark text-4xl font-moon mt-3">
               for everyone

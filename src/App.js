@@ -24,7 +24,6 @@ import LoginPage from './pages/account/login';
 import AccountPages from './pages/account/account';
 import {getUser} from './redux/auth/action';
 import {useDispatch} from 'react-redux';
-import Spinner from './components/common/spinner';
 import 'react-notifications/lib/notifications.css';
 import {NotificationContainer, NotificationManager} from 'react-notifications';
 require('dotenv').config();
@@ -42,6 +41,8 @@ export const createNotification = (type, content) => {
       break;
     case 'error':
       NotificationManager.error(content, 'Error', 5000);
+      break;
+    default:
       break;
   }
 };
@@ -62,9 +63,8 @@ function App() {
         <Header></Header>
         <div className="mt-16 absolute w-full overflow-x-hidden sm:px-20 md:px-16 xl:px-40 px-2">
           <Switch>
-            <Route path="/account" component={AccountPages} />
-
             <Route exact path="/" component={Home} />
+            <Route path="/account" component={AccountPages} />
             <Route exact path="/assets" component={Assets} />
             <Route path="/category" component={CategoryPage} />
             <Route path="/auction/:id" component={AuctionPage} />

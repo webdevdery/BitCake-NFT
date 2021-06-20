@@ -2,7 +2,7 @@ import NFTCard from '../components/common/NFTCard';
 import '@appnest/masonry-layout';
 import {Link} from 'react-router-dom';
 import HeroSection from '../components/home/HeroSection';
-import {nftLists, audioData, trendingCollections} from '../constants/home';
+import {nftLists, audioData} from '../constants/home';
 import GetStarted from '../components/common/home/GetStarted';
 import TrendingCollections from '../components/category/TrendingCollections';
 import Artists from '../components/common/home/artists';

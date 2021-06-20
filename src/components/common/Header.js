@@ -7,7 +7,7 @@ import {
   ChevronDownIcon,
   ChevronUpIcon,
 } from '@heroicons/react/outline';
-import {Link, useHistory, useLocation} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 import SubMenu from './SubMenu';
 import RedirectMenu from './RedirectMenu';
 import CustomButton from './Button';
@@ -47,22 +47,22 @@ export default function Header() {
   const marketPlaceMenus = [
     {
       value: 'All NFTs',
-      link: '/collection',
+      link: '/collections',
       svgPath: '/assets/icons/nav/all.png',
     },
     {
       value: 'Audio',
-      link: '/collection/audio',
+      link: '/collections/audio',
       svgPath: '/assets/icons/nav/audio.png',
     },
     {
       value: 'Video',
-      link: '/collection/video',
+      link: '/collections/video',
       svgPath: '/assets/icons/nav/video.png',
     },
     {
       value: 'Digital Art',
-      link: '/collection/art',
+      link: '/collections/art',
       svgPath: '/assets/icons/nav/art.png',
     },
     {
@@ -317,6 +317,7 @@ export default function Header() {
                   <img
                     src={`${process.env.REACT_APP_API_PATH}/${user.avatar}`}
                     className="rounded-full w-12 h-12 object-cover"
+                    alt="avatar"
                   />
                 </div>
               )}

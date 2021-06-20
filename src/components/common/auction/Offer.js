@@ -35,6 +35,7 @@ export default function Offer() {
                 <img
                   src="/assets/images/auction/empty-bids.svg"
                   className="w-40 rounded-md"
+                  alt="empty"
                 />
                 <div className="w-full text-center font-bold">
                   No offers yet

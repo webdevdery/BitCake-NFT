@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {Redirect, useHistory} from 'react-router';
+import {Redirect} from 'react-router';
 import WalletCard from '../../components/account/walletCard';
 import CustomButton from '../../components/common/Button';
 import {login} from '../../redux/auth/action';
@@ -22,8 +22,8 @@ export default function LoginPage() {
         "A browser extension with great flexibility. The web's most popular wallet",
     },
     {
-      type: 'CoinBase',
-      image: `CoinBase-logo`,
+      type: 'Binance Smart Chain wallet',
+      image: `BinanceWallet-logo`,
       description:
         "A browser extension with great flexibility. The web's most popular wallet",
     },
@@ -42,6 +42,7 @@ export default function LoginPage() {
         <img
           src={`/assets/images/wallet/${currentWallet}.png`}
           className={'w-40 h-40'}
+          alt="walletCard"
         />
       </div>
 
