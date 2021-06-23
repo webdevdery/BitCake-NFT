@@ -18,6 +18,10 @@ import axios from 'axios';
 import {tokenSelector, userSelector} from '../redux/auth/selector';
 import {getCollections} from '../services/collection';
 import {createNotification} from '../App';
+// import ipfs from '../utils/ipfs';
+// import {useWeb3React} from '@web3-react/core';
+// import {Web3Provider} from '@ethersproject/providers';
+// import {InjectedConnector} from '@web3-react/injected-connector';
 
 const ethRate = 2476.96;
 
@@ -147,6 +151,7 @@ export default function CreatePage() {
       buynowprice: buynowprice,
       auctionlength: auctionlength.value,
     };
+    console.log('=======', nftdata);
     const res = await axios.post(
       `${process.env.REACT_APP_API_PATH}/api/v1/private/create`,
       {
